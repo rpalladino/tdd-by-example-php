@@ -5,10 +5,8 @@ class DollarTest extends PHPUnit_Framework_TestCase
 	public function testMultiplication()
 	{
 		$five = new Dollar(5);
-		$product = $five->times(2);
-		$this->assertEquals(new Dollar(10), $product);
-		$product = $five->times(3);
-		$this->assertEquals(new Dollar(15), $product);
+		$this->assertEquals(new Dollar(10), $five->times(2));
+		$this->assertEquals(new Dollar(15), $five->times(3));
 	}
 
 	public function testEquality()
