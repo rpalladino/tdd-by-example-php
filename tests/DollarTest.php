@@ -8,7 +8,7 @@ class DollarTest extends PHPUnit_Framework_TestCase
 		$product = $five->times(2);
 		$this->assertEquals(new Dollar(10), $product);
 		$product = $five->times(3);
-		$this->assertEquals(15, $product->amount);
+		$this->assertEquals(new Dollar(15), $product);
 	}
 
 	public function testEquality()
