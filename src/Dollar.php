@@ -2,7 +2,7 @@
 
 class Dollar
 {
-    public $amount;
+    public $amount = 10;
 
 	public function __construct(int $amount)
     {
