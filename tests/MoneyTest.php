@@ -18,9 +18,9 @@ class MoneyTest extends PHPUnit_Framework_TestCase
 
 	public function testEquality()
 	{
-		$this->assertTrue((Money::dollar(5))->equals(Money::dollar(5)));
-		$this->assertFalse((Money::dollar(5))->equals(Money::dollar(6)));
-		$this->assertFalse((Money::franc(5))->equals(Money::dollar(5)));
+		$this->assertEquals(Money::dollar(5), Money::dollar(5));
+		$this->assertNotEquals(Money::dollar(5), Money::dollar(6));
+		$this->assertNotEquals(Money::franc(5), Money::dollar(5));
 	}
 
 	public function testCurrency()
