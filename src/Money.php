@@ -21,4 +21,6 @@ abstract class Money
     }
 
 	abstract public function times(int $amount);
+
+	abstract public function currency(): string;
 }
