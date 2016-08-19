@@ -15,6 +15,12 @@ abstract class Money
 		return new Franc($amount, "CHF");
 	}
 
+	public function __construct(int $amount, string $currency)
+    {
+        $this->amount = $amount;
+        $this->currency = $currency;
+	}
+
     public function equals(Money $money)
     {
         return $this->amount === $money->amount
