@@ -1,10 +1,10 @@
 <?php
 
-class Money
+abstract class Money
 {
 	protected $amount;
 
-	public static function dollar(int $amount)
+	public static function dollar(int $amount): Money
 	{
 		return new Dollar($amount);
 	}
@@ -14,4 +14,6 @@ class Money
         return $this->amount === $money->amount
 			&& static::class === get_class($money);
     }
+
+	abstract public function times(int $amount);
 }
