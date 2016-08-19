@@ -3,6 +3,7 @@
 abstract class Money
 {
 	protected $amount;
+	protected $currency;
 
 	public static function dollar(int $amount): Money
 	{
@@ -22,5 +23,8 @@ abstract class Money
 
 	abstract public function times(int $amount);
 
-	abstract public function currency(): string;
+	public function currency(): string
+	{
+		return $this->currency;
+	}
 }
