@@ -1,6 +1,6 @@
 <?php
 
-class Franc
+class Franc extends Money
 {
     private $amount;
 
