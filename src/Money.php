@@ -1,6 +1,6 @@
 <?php
 
-abstract class Money
+class Money
 {
 	protected $amount;
 	protected $currency;
@@ -27,7 +27,10 @@ abstract class Money
 			&& static::class === get_class($money);
     }
 
-	abstract public function times(int $amount);
+	public function times(int $amount)
+	{
+		return null;
+	}
 
 	public function currency(): string
 	{
