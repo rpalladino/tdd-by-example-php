@@ -27,10 +27,10 @@ class Money
 			&& $this->currency() === $money->currency();
     }
 
-	public function times(int $amount)
-	{
-		return null;
-	}
+	public function times(int $multiplier): Money
+    {
+        return new Money($this->amount * $multiplier, $this->currency);
+    }
 
 	public function currency(): string
 	{
