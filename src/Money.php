@@ -9,6 +9,11 @@ abstract class Money
 		return new Dollar($amount);
 	}
 
+	public static function franc(int $amount): Money
+	{
+		return new Franc($amount);
+	}
+
     public function equals(Money $money)
     {
         return $this->amount === $money->amount
