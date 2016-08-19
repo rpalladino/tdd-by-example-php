@@ -12,7 +12,7 @@ class Franc extends Money
         return new Franc($this->amount * $multiplier);
     }
 
-    public function equals(Franc $franc)
+    public function equals(Money $franc)
     {
         return $this->amount === $franc->amount;
     }
