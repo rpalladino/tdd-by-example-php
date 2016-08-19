@@ -12,7 +12,7 @@ abstract class Money
 
 	public static function franc(int $amount): Money
 	{
-		return new Franc($amount, null);
+		return new Franc($amount, "CHF");
 	}
 
     public function equals(Money $money)
