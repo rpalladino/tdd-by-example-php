@@ -11,7 +11,8 @@ class Bank
 
 	public function rate(string $from, string $to): int
 	{
-		return ($from === "CHF" && $to === "USD") ? 2 : 1;
+		$rate = $this->rates[(new Pair($from, $to))->hashCode()];
+		return $rate;
 	}
 
 	public function addRate(string $from, string $to, int $rate)
