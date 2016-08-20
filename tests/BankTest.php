@@ -16,4 +16,12 @@ class BankTest extends PHPUnit_Framework_TestCase
 		$result = $bank->reduce(Money::dollar(1), "USD");
 		$this->assertEquals(Money::dollar(1), $result);
 	}
+
+	public function testReduceMoneyDifferentCurrencies()
+	{
+		$bank = new Bank();
+		$bank->addRate("CHF", "USD", 2);
+		$result = $bank->reduce(Money::franc(2), "USD");
+		$this->assertEquals(Money::dollar(1), $result);
+	}
 }
