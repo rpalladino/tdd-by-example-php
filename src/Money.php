@@ -2,7 +2,7 @@
 
 class Money implements Expression
 {
-	protected $amount;
+	public $amount;
 	protected $currency;
 
 	public static function dollar(int $amount): Money
