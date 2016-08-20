@@ -20,6 +20,6 @@ class Sum implements Expression
 
 	public function plus(Expression $addend): Expression
 	{
-		return null;
+		return new Sum($this, $addend);
 	}
 }
