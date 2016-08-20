@@ -1,6 +1,6 @@
 <?php
 
-class Sum
+class Sum implements Expression
 {
 	public $augend;
 	public $addend;
