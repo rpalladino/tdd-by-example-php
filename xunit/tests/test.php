@@ -12,7 +12,16 @@ class TestCaseTest extends TestCase {
         $test->run();
         assert($test->wasRun);
     }
+
+    function testSetUp() {
+        $test = new WasRun("testMethod");
+        $test->run();
+        assert($test->wasSetUp);
+    }
 }
 
 $test = new TestCaseTest("testRunning");
+$test->run();
+
+$test = new TestCaseTest("testSetUp");
 $test->run();
