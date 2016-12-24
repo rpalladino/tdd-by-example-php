@@ -3,17 +3,16 @@
 namespace xUnit;
 
 class WasRun extends TestCase {
+    public $log;
     public $wasRun;
-    public $wasSetUp;
 
     public function __construct($name) {
         $this->wasRun = false;
-        $this->wasSetUp = false;
         parent::__construct($name);
     }
 
     public function setUp() {
-        $this->wasSetUp = true;
+        $this->log = "setUp ";
     }
 
     public function testMethod() {

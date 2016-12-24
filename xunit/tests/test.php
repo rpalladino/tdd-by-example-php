@@ -17,7 +17,7 @@ class TestCaseTest extends TestCase {
 
     function testSetUp() {
         $this->test->run();
-        assert($this->test->wasSetUp);
+        assert("setUp " == $this->test->log);
     }
 }
 
