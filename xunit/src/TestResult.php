@@ -4,8 +4,15 @@ namespace xUnit;
 
 class TestResult
 {
+    private $runCount = 0;
+
+    public function testStarted()
+    {
+        $this->runCount += 1;
+    }
+
     public function summary()
     {
-        return "1 run, 0 failed";
+        return sprintf("%d run, 0 failed", $this->runCount);
     }
 }
