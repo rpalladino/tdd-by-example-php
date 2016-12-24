@@ -3,13 +3,20 @@
 namespace xUnit;
 
 class WasRun {
-    public $wasRun = false;
+    public $wasRun;
+    private $name;
+
+    public function __construct($name) {
+        $this->wasRun = false;
+        $this->name = $name;
+    }
 
     public function testMethod() {
         $this->wasRun = true;
     }
 
     public function run() {
-        $this->testMethod();
+        $method = $this->name;
+        $this->$method();
     }
 }
