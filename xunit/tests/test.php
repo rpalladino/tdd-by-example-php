@@ -3,6 +3,7 @@
 require __DIR__ . "/../../vendor/autoload.php";
 
 use xUnit\TestCase;
+use xUnit\TestResult;
 use xUnit\WasRun;
 
 class TestCaseTest extends TestCase {
@@ -17,7 +18,22 @@ class TestCaseTest extends TestCase {
         $result = $test->run();
         assert("1 run, 0 failed" == $result->summary());
     }
+
+    function testFailedResult() {
+        $test = new WasRun("testBrokenMethod");
+        $result = $test->run();
+        assert("1 run, 1 failed" == $result->summary());
+    }
+
+    function testFailedResultFormatting() {
+        $result = new TestResult();
+        $result->testStarted();
+        $result->testFailed();
+        assert("1 run, 1 failed" == $result->summary());
+    }
 }
 
 (new TestCaseTest("testTemplateMethod"))->run();
 (new TestCaseTest("testResult"))->run();
+(new TestCaseTest("testFailedResult"))->run();
+(new TestCaseTest("testFailedResultFormatting"))->run();
