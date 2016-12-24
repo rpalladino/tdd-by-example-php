@@ -10,6 +10,6 @@ class WasRun extends TestCase {
     }
 
     public function testMethod() {
-        $this->log += "testMethod ";
+        $this->log .= "testMethod ";
     }
 }
