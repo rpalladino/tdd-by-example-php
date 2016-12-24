@@ -9,7 +9,7 @@ class TestCaseTest extends TestCase {
     function testTemplateMethod() {
         $test = new WasRun("testMethod");
         $test->run();
-        assert("setUp testMethod " == $test->log);
+        assert("setUp testMethod tearDown " == $test->log);
     }
 }
 
