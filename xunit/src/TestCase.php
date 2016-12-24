@@ -17,6 +17,8 @@ class TestCase {
         $method = $this->name;
         $this->$method();
         $this->tearDown();
+
+        return new TestResult();
     }
 
     public function tearDown() {}
