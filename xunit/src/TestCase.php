@@ -4,6 +4,7 @@ namespace xUnit;
 
 class TestCase {
     private $name;
+    protected $test;
 
     public function __construct($name) {
         $this->name = $name;
