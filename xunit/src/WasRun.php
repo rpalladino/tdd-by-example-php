@@ -8,4 +8,8 @@ class WasRun {
     public function testMethod() {
         $this->wasRun = true;
     }
+
+    public function run() {
+        $this->testMethod();
+    }
 }
