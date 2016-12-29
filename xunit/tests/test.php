@@ -33,7 +33,7 @@ class TestCaseTest extends TestCase {
     }
 }
 
-(new TestCaseTest("testTemplateMethod"))->run();
-(new TestCaseTest("testResult"))->run();
-(new TestCaseTest("testFailedResult"))->run();
-(new TestCaseTest("testFailedResultFormatting"))->run();
+print (new TestCaseTest("testTemplateMethod"))->run()->summary() . PHP_EOL;
+print (new TestCaseTest("testResult"))->run()->summary() . PHP_EOL;
+print (new TestCaseTest("testFailedResult"))->run()->summary() . PHP_EOL;
+print (new TestCaseTest("testFailedResultFormatting"))->run()->summary() . PHP_EOL;
